@@ -1,3 +1,6 @@
+#ifndef UZYTKOWNIK_H //bo uzytkownik.h wystepuje w kilcku plikach w naglowku
+#define UZYTKOWNIK_H
+
 #include <iostream>
 
 
@@ -18,4 +21,7 @@ public:
 	string pobierzLogin();
 	string pobierzHaslo();
 	
+	
 };
+
+#endif
