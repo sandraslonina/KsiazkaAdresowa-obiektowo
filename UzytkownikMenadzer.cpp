@@ -79,7 +79,7 @@ void UzytkownikMenadzer::wczytajUzytkownikowZPliku()
 
 }
 
-int UzytkownikMenadzer::logowanieUzytkownika()
+void UzytkownikMenadzer::logowanieUzytkownika()
 {
     Uzytkownik uzytkownik;
     string login = "", haslo = "";
@@ -99,22 +99,27 @@ int UzytkownikMenadzer::logowanieUzytkownika()
 
                 if (itr -> pobierzHaslo() == haslo)
                 {
+                    idZalogowanegoUzytkownika = itr -> pobierzId();
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    return itr -> pobierzId();
+                    return;
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
-            return 0;
+            return;
         }
         itr++;
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    return 0;
+    return;
 }
 
+int UzytkownikMenadzer::pobierzIdZalogowanegoUzytkownika()
+{
+    return idZalogowanegoUzytkownika;
+}
 
 void UzytkownikMenadzer::zmianaHaslaZalogowanegoUzytkownika()
 {
@@ -125,7 +130,7 @@ void UzytkownikMenadzer::zmianaHaslaZalogowanegoUzytkownika()
 
     for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
     {
-        if (itr -> pobierzId() == idZalogowanegoUzytkownika)
+        if (itr -> pobierzId() == pobierzIdZalogowanegoUzytkownika())
         {
             itr -> ustawHaslo(noweHaslo);
             cout << "Haslo zostalo zmienione." << endl << endl;
@@ -136,8 +141,22 @@ void UzytkownikMenadzer::zmianaHaslaZalogowanegoUzytkownika()
     
 }
 
-int UzytkownikMenadzer::pobierzIdZalogowanegoUzytkownika()
+void UzytkownikMenadzer::wylogowanieUzytkownika()
 {
-    return idZalogowanegoUzytkownika;
+    if (idZalogowanegoUzytkownika == 0)
+        cout << "Nikt nie jest zalogowany" << endl;
+    else {
+        vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
+        while (itr != uzytkownicy.end())
+        {
+            if (itr -> pobierzId() == idZalogowanegoUzytkownika)
+                break;
+            itr++;
+        }
+        cout << "Uzytkownik: "<<itr->pobierzLogin() << " zostal wylogowany."<<endl;
+        idZalogowanegoUzytkownika = 0;
+    }
+
 }
+
 
