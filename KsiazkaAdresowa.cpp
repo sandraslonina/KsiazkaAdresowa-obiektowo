@@ -12,4 +12,18 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 	uzytkownikMenadzer.wypiszWszystkichUzytkownikow();
 }
 
+void KsiazkaAdresowa::logowanieUzytkownika()
+{
+	uzytkownikMenadzer.logowanieUzytkownika();
+}
 
+
+void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
+{
+	uzytkownikMenadzer.zmianaHaslaZalogowanegoUzytkownika();
+}
+
+void KsiazkaAdresowa::wylogowanieUzytkownika()
+{
+	uzytkownikMenadzer.wylogowanieUzytkownika();
+}
