@@ -1,4 +1,4 @@
-#ifndef UZYTKOWNIKMENADZER_H 
+#ifndef UZYTKOWNIKMENADZER_H
 #define UZYTKOWNIKMENADZER_H
 
 
@@ -14,31 +14,29 @@
 
 using namespace std;
 
-class UzytkownikMenadzer
-{
-	int idZalogowanegoUzytkownika;
-	vector <Uzytkownik> uzytkownicy;
-	
-	Uzytkownik podajDaneNowegoUzytkownika(); 
-	int pobierzIdNowegoUzytkownika();
-	bool czyIstniejeLogin(string login);
-	PlikZUzytkownikami plikZUzytkownikami;
+class UzytkownikMenadzer {
+    int idZalogowanegoUzytkownika;
+    vector <Uzytkownik> uzytkownicy;
 
-	
-	public:  
-		UzytkownikMenadzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami (nazwaPlikuZUzytkownikami) 
-		{
-			idZalogowanegoUzytkownika = 0 ;
+    Uzytkownik podajDaneNowegoUzytkownika();
+    int pobierzIdNowegoUzytkownika();
+    bool czyIstniejeLogin(string login);
+    PlikZUzytkownikami plikZUzytkownikami;
+
+
+public:
+    UzytkownikMenadzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami (nazwaPlikuZUzytkownikami) {
+        idZalogowanegoUzytkownika = 0 ;
         uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-        };
-void rejestracjaUzytkownika();
-void wypiszWszystkichUzytkownikow();
-void wczytajUzytkownikowZPliku();
-void logowanieUzytkownika();
-void zmianaHaslaZalogowanegoUzytkownika();
-int pobierzIdZalogowanegoUzytkownika();
-void wylogowanieUzytkownika();
-bool czyUzytkownikJestZalogowany();
+    };
+    void rejestracjaUzytkownika();
+    void wypiszWszystkichUzytkownikow();
+    void wczytajUzytkownikowZPliku();
+    void logowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
+    void wylogowanieUzytkownika();
+    bool czyUzytkownikJestZalogowany();
 
 
 };

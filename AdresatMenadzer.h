@@ -9,26 +9,19 @@
 using namespace std;
 
 
-class AdresatMenadzer
-{
+class AdresatMenadzer {
 	
-	
-	vector<Adresat> adresaci;
-	 
-	Adresat podajDaneNowegoAdresata();
-	void wyswietlDaneAdresata(Adresat adresat);
-	int pobierzIdNowegoAdresata();
+    vector<Adresat> adresaci;
 
-	
-	
+    Adresat podajDaneNowegoAdresata();
+    void wyswietlDaneAdresata(Adresat adresat);
+    int pobierzIdNowegoAdresata();
+
 public:
-	
-	
-	void dodajAdresata();
-	void wyswietlWszystkichAdresatow();
-	
 
-	
+    void dodajAdresata();
+    void wyswietlWszystkichAdresatow();
+
 };
 
 #endif
