@@ -5,8 +5,7 @@
 
 using namespace std;
 
-class Adresat
-{
+class Adresat {
     int id;
     int idUzytkownika;
     string imie;
@@ -33,4 +32,4 @@ public:
     string pobierzAdres();
 };
 
-#endif 
+#endif

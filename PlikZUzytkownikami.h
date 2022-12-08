@@ -1,4 +1,4 @@
-#ifndef PLIKZUZYTKOWNIKAMI_H 
+#ifndef PLIKZUZYTKOWNIKAMI_H
 #define PLIKZUZYTKOWNIKAMI_H
 
 #include <iostream>
@@ -13,21 +13,20 @@
 using namespace std;
 
 
-class PlikZUzytkownikami
-{
-	const string nazwaPlikuZUzytkownikami;
-	
+class PlikZUzytkownikami {
+    const string nazwaPlikuZUzytkownikami;
+
     bool czyPlikJestPusty();
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
-   Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
-    
-	
+    Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
+
+
 public:
-	PlikZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI) : nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI){}; //lista inijalizacyjna 
-	void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
-	vector <Uzytkownik> wczytajUzytkownikowZPliku();
-	void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy);
-	
+    PlikZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI) : nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI) {}; //lista inijalizacyjna
+    void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
+    vector <Uzytkownik> wczytajUzytkownikowZPliku();
+    void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy);
+
 
 };
 

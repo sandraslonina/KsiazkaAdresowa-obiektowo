@@ -9,30 +9,28 @@
 
 using namespace std;
 
-class KsiazkaAdresowa
-{
+class KsiazkaAdresowa {
     UzytkownikMenadzer uzytkownikMenadzer;
-     AdresatMenadzer *adresatManadzer; 
+    AdresatMenadzer *adresatManadzer;
 
-    
+
 public:
-	KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenadzer(nazwaPlikuZUzytkownikami) 
-	{
-		uzytkownikMenadzer.wczytajUzytkownikowZPliku();
-	};
-	
-	int pobierzIdZalogowanegoUzytkownika();
-	
-	void rejestracjaUzytkownika();
-	void wypiszWszystkichUzytkownikow();
-	void logowanieUzytkownika();
-	void zmianaHaslaZalogowanegoUzytkownika();
-	void wylogowanieUzytkownika();
-	void dodajAdresata();
-	void wyswietlWszystkichAdresatow();
-	
-	
-	
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenadzer(nazwaPlikuZUzytkownikami) {
+        uzytkownikMenadzer.wczytajUzytkownikowZPliku();
+    };
+
+    int pobierzIdZalogowanegoUzytkownika();
+
+    void rejestracjaUzytkownika();
+    void wypiszWszystkichUzytkownikow();
+    void logowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
+    void wylogowanieUzytkownika();
+    void dodajAdresata();
+    void wyswietlWszystkichAdresatow();
+
+
+
 };
 
 #endif

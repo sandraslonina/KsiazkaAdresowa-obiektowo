@@ -8,13 +8,12 @@
 using namespace std;
 
 
-class MetodyPomocnicze
-{
-	public:
-	static string konwersjaIntNaString(int liczba);
-	static string wczytajLinie();
-	static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
-	
+class MetodyPomocnicze {
+public:
+    static string konwersjaIntNaString(int liczba);
+    static string wczytajLinie();
+    static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+
 };
 
 #endif
