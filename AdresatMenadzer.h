@@ -18,11 +18,16 @@ class AdresatMenadzer
 	Adresat podajDaneNowegoAdresata();
 	void wyswietlDaneAdresata(Adresat adresat);
 	int pobierzIdNowegoAdresata();
+
+	
 	
 public:
 	
 	
 	void dodajAdresata();
+	void wyswietlWszystkichAdresatow();
+	
+
 	
 };
 

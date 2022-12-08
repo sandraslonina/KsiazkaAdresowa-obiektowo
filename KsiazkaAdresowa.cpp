@@ -45,4 +45,16 @@ void KsiazkaAdresowa::dodajAdresata()
     }
 }
 
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow() 
+{
+    if (uzytkownikMenadzer.czyUzytkownikJestZalogowany()) {
+        adresatManadzer -> wyswietlWszystkichAdresatow();
+    }
+    else {
+        cout << "Najpierw musisz sie zalogowac" << endl;
+        system ("pause");
+    }
+}
+
+
 

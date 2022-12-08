@@ -19,7 +19,7 @@ class UzytkownikMenadzer
 	int idZalogowanegoUzytkownika;
 	vector <Uzytkownik> uzytkownicy;
 	
-	Uzytkownik podajDaneNowegoUzytkownika(); //prywatna bo jest w srodku innej funkcji
+	Uzytkownik podajDaneNowegoUzytkownika(); 
 	int pobierzIdNowegoUzytkownika();
 	bool czyIstniejeLogin(string login);
 	PlikZUzytkownikami plikZUzytkownikami;

@@ -79,6 +79,25 @@ void AdresatMenadzer::wyswietlDaneAdresata(Adresat adresat)
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
 
+void AdresatMenadzer::wyswietlWszystkichAdresatow()
+{
+    system("cls");
+    if (!adresaci.empty())
+    {
+        cout << "             >>> ADRESACI <<<" << endl;
+        cout << "-----------------------------------------------" << endl;
+        for (vector <Adresat> :: iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
+        {
+            wyswietlDaneAdresata(*itr);
+        }
+        cout << endl;
+    }
+    else
+    {
+        cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
+    }
+    system("pause");
+}
 
 
 
