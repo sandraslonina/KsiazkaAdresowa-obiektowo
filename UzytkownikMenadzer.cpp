@@ -50,7 +50,7 @@ int UzytkownikMenadzer::pobierzIdNowegoUzytkownika()
 
 bool UzytkownikMenadzer::czyIstniejeLogin(string login)
 {
-    for (int i = 0; i <uzytkownicy.size(); i++)
+    for (unsigned int i = 0; i <uzytkownicy.size(); i++)
 	{
 		if (uzytkownicy[i].pobierzLogin() == login)
 		{
@@ -65,7 +65,7 @@ bool UzytkownikMenadzer::czyIstniejeLogin(string login)
 
 void UzytkownikMenadzer::wypiszWszystkichUzytkownikow()
 {
-	for (int i = 0; i <uzytkownicy.size(); i++)
+	for (unsigned int i = 0; i <uzytkownicy.size(); i++)
 	{
 		cout << uzytkownicy[i].pobierzId() << endl;
 		cout << uzytkownicy[i].pobierzLogin() << endl;
@@ -157,6 +157,14 @@ void UzytkownikMenadzer::wylogowanieUzytkownika()
         idZalogowanegoUzytkownika = 0;
     }
 
+}
+
+bool UzytkownikMenadzer::czyUzytkownikJestZalogowany() 
+{
+    if (idZalogowanegoUzytkownika > 0)
+        return true;
+    else
+        return false;
 }
 
 

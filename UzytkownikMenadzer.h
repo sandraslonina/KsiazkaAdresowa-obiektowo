@@ -38,7 +38,7 @@ void logowanieUzytkownika();
 void zmianaHaslaZalogowanegoUzytkownika();
 int pobierzIdZalogowanegoUzytkownika();
 void wylogowanieUzytkownika();
-bool sprawdzCzyUzytkownikJestZalogowany();
+bool czyUzytkownikJestZalogowany();
 
 
 };
