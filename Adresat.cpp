@@ -1,11 +1,12 @@
 #include "Adresat.h"
 
 void Adresat::ustawId(int noweId) {
-    id = noweId;
+    if (noweId >= 0) //walidacja - zabezpieczenie przed zlym zapisem
+        id = noweId;
 }
 
-void Adresat::ustawIdUzytkownika(int ID_ZALOGOWANEGO_UZYTKOWNIKA) {
-    idUzytkownika = ID_ZALOGOWANEGO_UZYTKOWNIKA;
+void Adresat::ustawIdUzytkownika(int noweIdUzytkownika) {
+    idUzytkownika = noweIdUzytkownika;
 }
 
 void Adresat::ustawImie(string noweImie) {

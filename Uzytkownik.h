@@ -1,8 +1,7 @@
-#ifndef UZYTKOWNIK_H //bo uzytkownik.h wystepuje w kilcku plikach w naglowku
+#ifndef UZYTKOWNIK_H 
 #define UZYTKOWNIK_H
 
 #include <iostream>
-
 
 using namespace std;
 
@@ -12,6 +11,7 @@ class Uzytkownik {
     string haslo;
 
 public:
+	
     void ustawId(int noweId);    //setery
     void ustawLogin(string nowyLogin);
     void ustawHaslo(string noweHaslo);
