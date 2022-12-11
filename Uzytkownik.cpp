@@ -1,7 +1,7 @@
 #include "Uzytkownik.h"
 
 void Uzytkownik::ustawId(int noweId) {
-    if (noweId >= 0) //walidacja - zabezoieczenie przed z³ym zapisem
+    if (noweId >= 0) //walidacja - zabezpieczenie przed zlym zapisem
         id = noweId;
 }
 void Uzytkownik::ustawLogin(string nowyLogin) {

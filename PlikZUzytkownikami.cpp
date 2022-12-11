@@ -1,6 +1,5 @@
 #include "PlikZUzytkownikami.h"
 
-
 void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) {
 
     string liniaZDanymiUzytkownika = "";
@@ -25,19 +24,23 @@ void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) {
 }
 
 bool PlikZUzytkownikami::czyPlikJestPusty() {
+    bool pusty = true;
     fstream plikTekstowy;
-    plikTekstowy.seekg(0, ios::end);
+    plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::app);
 
-    if (plikTekstowy.tellg() == 0)
-        return true;
+    if (plikTekstowy.good() == true) {
+        plikTekstowy.seekg(0, ios::end);
 
-    else
-        return false;
+        if (plikTekstowy.tellg() != 0)
+            pusty = false;
+    }
+
+    plikTekstowy.close();
+    return pusty;
 }
 
 string PlikZUzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik) {
     string liniaZDanymiUzytkownika = "";
-
     liniaZDanymiUzytkownika += MetodyPomocnicze::konwersjaIntNaString(uzytkownik.pobierzId())+ '|'; //metoda stateczna - W PLIKU Z metodami pomocniczymi musi byc dopisany static
     liniaZDanymiUzytkownika += uzytkownik.pobierzLogin() + '|';
     liniaZDanymiUzytkownika += uzytkownik.pobierzHaslo() + '|';
@@ -58,10 +61,9 @@ vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku() {
             uzytkownik = pobierzDaneUzytkownika(daneJednegoUzytkownikaOddzielonePionowymiKreskami);
             uzytkownicy.push_back(uzytkownik);
         }
-
-        plikTekstowy.close();
     }
 
+    plikTekstowy.close();
     return uzytkownicy;
 }
 
@@ -97,7 +99,7 @@ Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkown
     return uzytkownik;
 }
 
-void PlikZUzytkownikami::zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> &uzytkownicy) {
+void PlikZUzytkownikami::zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> uzytkownicy) {
     fstream plikTekstowy;
     string liniaZDanymiUzytkownika = "";
     vector <Uzytkownik>::iterator itrKoniec = --uzytkownicy.end();
