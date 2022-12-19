@@ -22,8 +22,7 @@ class PlikZUzytkownikami {
 
 public:
 
-    PlikZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI)
-        : nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI) {}; //lista inijalizacyjna
+    PlikZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI) : nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI) {}; 
 
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 

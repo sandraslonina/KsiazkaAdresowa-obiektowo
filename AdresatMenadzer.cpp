@@ -1,5 +1,6 @@
 #include "AdresatMenadzer.h"
 
+
 void AdresatMenadzer::dodajAdresata() {
 
     Adresat adresat;
@@ -27,7 +28,7 @@ Adresat AdresatMenadzer::podajDaneNowegoAdresata() {
 
     adresat.ustawId (plikZAdresatami.pobierzIdOstatniegoAdresata()+1);
     adresat.ustawIdUzytkownika (ID_ZALOGOWANEGO_UZYTKOWNIKA);
-
+    
     cin.sync();
     cout << "Podaj imie: ";
     imie = MetodyPomocnicze::wczytajLinie();

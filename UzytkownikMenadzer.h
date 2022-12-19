@@ -18,7 +18,7 @@ class UzytkownikMenadzer {
     vector <Uzytkownik> uzytkownicy;
 
     Uzytkownik podajDaneNowegoUzytkownika();
-    
+
     bool czyIstniejeLogin(string login);
     PlikZUzytkownikami plikZUzytkownikami;
 
@@ -27,10 +27,10 @@ public:
         idZalogowanegoUzytkownika = 0 ;
         uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
     };
-    
+
     int pobierzIdNowegoUzytkownika();
     int pobierzIdZalogowanegoUzytkownika();
-    
+
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
@@ -43,3 +43,4 @@ public:
 };
 
 #endif
+

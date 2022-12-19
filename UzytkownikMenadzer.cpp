@@ -81,7 +81,7 @@ int UzytkownikMenadzer::logowanieUzytkownika() {
                 haslo = MetodyPomocnicze::wczytajLinie();
 
                 if (itr -> pobierzHaslo() == haslo) {
-                    
+
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     idZalogowanegoUzytkownika = itr -> pobierzId();
@@ -155,5 +155,8 @@ bool UzytkownikMenadzer::czyUzytkownikJestZalogowany() {
     else
         return false;
 }
+
+
+
 
 

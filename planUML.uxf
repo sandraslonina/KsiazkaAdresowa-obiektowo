@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>968</x>
-      <y>77</y>
+      <x>814</x>
+      <y>22</y>
       <w>132</w>
       <h>99</h>
     </coordinates>
@@ -23,8 +23,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>66</x>
-      <y>77</y>
+      <x>55</x>
+      <y>22</y>
       <w>253</w>
       <h>209</h>
     </coordinates>
@@ -38,8 +38,8 @@ KsiazkaAdresowa()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>363</x>
-      <y>44</y>
+      <x>22</x>
+      <y>275</y>
       <w>572</w>
       <h>330</h>
     </coordinates>
@@ -70,10 +70,10 @@ UzytkownikMenadzer()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>605</x>
-      <y>396</y>
-      <w>495</w>
-      <h>242</h>
+      <x>616</x>
+      <y>275</y>
+      <w>638</w>
+      <h>330</h>
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
 --
@@ -92,8 +92,8 @@ UzytkownikMenadzer()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>77</x>
-      <y>418</y>
+      <x>330</x>
+      <y>22</y>
       <w>473</w>
       <h>143</h>
     </coordinates>
@@ -110,8 +110,8 @@ UzytkownikMenadzer()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>55</x>
-      <y>627</y>
+      <x>957</x>
+      <y>22</y>
       <w>319</w>
       <h>187</h>
     </coordinates>
@@ -129,10 +129,10 @@ UzytkownikMenadzer()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>462</x>
-      <y>671</y>
-      <w>363</w>
-      <h>187</h>
+      <x>22</x>
+      <y>627</y>
+      <w>572</w>
+      <h>242</h>
     </coordinates>
     <panel_attributes>AdresatMenadzer
 --
@@ -150,10 +150,10 @@ Adresat Menadzer ()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>132</x>
-      <y>880</y>
-      <w>110</w>
-      <h>33</h>
+      <x>616</x>
+      <y>627</y>
+      <w>638</w>
+      <h>242</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
