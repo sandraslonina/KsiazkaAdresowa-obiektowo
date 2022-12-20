@@ -144,8 +144,8 @@ void UzytkownikMenadzer::wylogowanieUzytkownika() {
 
         cout << "Uzytkownik: "<<itr->pobierzLogin() << " zostal wylogowany."<<endl;
         idZalogowanegoUzytkownika = 0;
+        Sleep(1000);
     }
-
 }
 
 bool UzytkownikMenadzer::czyUzytkownikJestZalogowany() {

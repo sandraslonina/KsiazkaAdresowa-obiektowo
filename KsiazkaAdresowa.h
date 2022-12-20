@@ -10,16 +10,13 @@
 using namespace std;
 
 class KsiazkaAdresowa {
-
     UzytkownikMenadzer uzytkownikMenadzer;
     AdresatMenadzer adresatMenadzer;
 
 public:
-
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenadzer(nazwaPlikuZUzytkownikami), adresatMenadzer(nazwaPlikuZAdresatami) {
         uzytkownikMenadzer.wczytajUzytkownikowZPliku();
     };
-
     int pobierzIdZalogowanegoUzytkownika();
 
     void rejestracjaUzytkownika();
@@ -31,7 +28,6 @@ public:
     void wyswietlWszystkichAdresatow();
 
     bool czyUzytkownikJestZalogowany();
-
 };
 
 #endif

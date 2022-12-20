@@ -23,8 +23,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>55</x>
-      <y>22</y>
+      <x>33</x>
+      <y>11</y>
       <w>253</w>
       <h>209</h>
     </coordinates>
@@ -59,7 +59,7 @@ UzytkownikMenadzer()
 + zapiszWszystkichUzytkownikowDoPliku() : void
 + wylogowanieUzytkownika() : Void
 + czyUzytkownikJestZalogowany() : Bool
-
+--
 - podajDaneNowegoUzytkownika() : Uzytkownik
 - czyIstniejeLogin : Bool
 
@@ -83,7 +83,7 @@ UzytkownikMenadzer()
 + dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) : void
 + wczytajUzytkownikowZPliku() : vector &lt;Uzytkownik&gt;
 + zapiszWszystkichUzytkownikowDoPliku() : void
-
+--
 - czyPlikJestPusty() : Bool
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik) : String
 </panel_attributes>
@@ -136,13 +136,16 @@ UzytkownikMenadzer()
     </coordinates>
     <panel_attributes>AdresatMenadzer
 --
-ID_ZALOGOWANEGO_UZYTKOWNIKA : Integer
+idZalogowanegoUzytkownika : Integer
 adresaci : vector&lt;Adresat&gt;
 --
 Adresat Menadzer ()
 + dodajAdresata() : void
 + wyswietlWszystkichAdresatow() : void
-
++ pobierzIdZalogowanegoUzytkownika() : Integer
++ ustawIdZalogowanegoUzytkownika() : void
++ wczutajAdresatowZalogowanegoUzytkownikaDoPliku() : vpid
+--
 - podajDaneNowegoAdresata() : Adresat
 - wyswietlDaneAdresata() : void</panel_attributes>
     <additional_attributes/>

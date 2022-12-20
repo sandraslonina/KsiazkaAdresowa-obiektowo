@@ -11,13 +11,12 @@ class Uzytkownik {
     string haslo;
 
 public:
-
     Uzytkownik (int id = 0, string login = "", string haslo = "") {
         this -> id = id;
         this -> login = login;
         this -> haslo = haslo;
     }
-
+    
     void ustawId(int noweId);    //setery
     void ustawLogin(string nowyLogin);
     void ustawHaslo(string noweHaslo);
@@ -25,8 +24,6 @@ public:
     int pobierzId();  //getery
     string pobierzLogin();
     string pobierzHaslo();
-
-
 };
 
 #endif
