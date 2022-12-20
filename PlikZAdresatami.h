@@ -13,7 +13,6 @@
 using namespace std;
 
 class PlikZAdresatami
-
 {
     const string nazwaPlikuZAdresatami;
 
@@ -26,7 +25,6 @@ class PlikZAdresatami
     bool czyPlikJestPusty();
 
 public:
-
     PlikZAdresatami (string NAZWAPLIKUZADRESATAMI) : nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI) {};
 
     bool dopiszAdresataDoPliku(Adresat adresat);

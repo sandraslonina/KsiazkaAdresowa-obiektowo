@@ -6,7 +6,6 @@
 #include <fstream>
 #include <cstdlib>
 
-
 #include "Uzytkownik.h"
 #include "MetodyPomocnicze.h"
 
@@ -14,14 +13,12 @@ using namespace std;
 
 
 class PlikZUzytkownikami {
-
     const string nazwaPlikuZUzytkownikami;
 
     bool czyPlikJestPusty();
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
 
 public:
-
     PlikZUzytkownikami(string NAZWAPLIKUZUZYTKOWNIKAMI) : nazwaPlikuZUzytkownikami(NAZWAPLIKUZUZYTKOWNIKAMI) {}; 
 
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);

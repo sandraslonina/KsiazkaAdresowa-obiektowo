@@ -1,6 +1,5 @@
 #include "AdresatMenadzer.h"
 
-
 void AdresatMenadzer::dodajAdresata() {
 
     Adresat adresat;
@@ -27,7 +26,7 @@ Adresat AdresatMenadzer::podajDaneNowegoAdresata() {
     string imie, nazwisko;
 
     adresat.ustawId (plikZAdresatami.pobierzIdOstatniegoAdresata()+1);
-    adresat.ustawIdUzytkownika (ID_ZALOGOWANEGO_UZYTKOWNIKA);
+    adresat.ustawIdUzytkownika (idZalogowanegoUzytkownika);
     
     cin.sync();
     cout << "Podaj imie: ";
@@ -49,7 +48,6 @@ Adresat AdresatMenadzer::podajDaneNowegoAdresata() {
 
     return adresat;
 }
-
 
 void AdresatMenadzer::wyswietlWszystkichAdresatow() {
     system("cls");
@@ -80,11 +78,12 @@ void AdresatMenadzer::wyswietlDaneAdresata(Adresat adresat) {
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
 
+void AdresatMenadzer::ustawIdZalogowanegoUzytkownika(int idZalogowanegoUzytkownika)
+{
+	this->idZalogowanegoUzytkownika = idZalogowanegoUzytkownika;
+}
 
-
-
-
-
-
-
-
+void AdresatMenadzer::wczytajAdresatowZalogowanegoUzytkownikaDoPliku()
+{
+	adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+}

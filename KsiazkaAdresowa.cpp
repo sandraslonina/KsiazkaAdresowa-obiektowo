@@ -14,9 +14,10 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow() {
 
 void KsiazkaAdresowa::logowanieUzytkownika () {
     uzytkownikMenadzer.logowanieUzytkownika();
-    
+
     if (uzytkownikMenadzer.czyUzytkownikJestZalogowany()) {
-        adresatMenadzer = new AdresatMenadzer(uzytkownikMenadzer.pobierzIdZalogowanegoUzytkownika());
+        adresatMenadzer.ustawIdZalogowanegoUzytkownika(uzytkownikMenadzer.pobierzIdZalogowanegoUzytkownika());
+        adresatMenadzer.wczytajAdresatowZalogowanegoUzytkownikaDoPliku();
     }
 }
 
