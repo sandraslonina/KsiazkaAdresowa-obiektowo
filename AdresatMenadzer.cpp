@@ -26,7 +26,7 @@ Adresat AdresatMenadzer::podajDaneNowegoAdresata() {
     string imie, nazwisko;
 
     adresat.ustawId (plikZAdresatami.pobierzIdOstatniegoAdresata()+1);
-    adresat.ustawIdUzytkownika (idZalogowanegoUzytkownika);
+    adresat.ustawIdUzytkownika (ID_ZALOGOWANEGO_UZYTKOWNIKA);
     
     cin.sync();
     cout << "Podaj imie: ";
@@ -76,14 +76,4 @@ void AdresatMenadzer::wyswietlDaneAdresata(Adresat adresat) {
     cout << "Numer telefonu:     " << adresat.pobierzNumerTelefonu() << endl;
     cout << "Email:              " << adresat.pobierzEmail() << endl;
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
-}
-
-void AdresatMenadzer::ustawIdZalogowanegoUzytkownika(int idZalogowanegoUzytkownika)
-{
-	this->idZalogowanegoUzytkownika = idZalogowanegoUzytkownika;
-}
-
-void AdresatMenadzer::wczytajAdresatowZalogowanegoUzytkownikaDoPliku()
-{
-	adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
 }

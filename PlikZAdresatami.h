@@ -12,9 +12,8 @@
 
 using namespace std;
 
-class PlikZAdresatami
-{
-    const string nazwaPlikuZAdresatami;
+class PlikZAdresatami {
+    const string NAZWA_PLIKU_Z_ADRESATAMI;
 
     int idOstatniegoAdresata;
 
@@ -25,7 +24,9 @@ class PlikZAdresatami
     bool czyPlikJestPusty();
 
 public:
-    PlikZAdresatami (string NAZWAPLIKUZADRESATAMI) : nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI) {};
+    PlikZAdresatami (string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami) {
+        idOstatniegoAdresata = 0;
+    };
 
     bool dopiszAdresataDoPliku(Adresat adresat);
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
