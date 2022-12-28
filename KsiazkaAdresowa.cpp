@@ -75,6 +75,8 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika() {
     cout << " >>> MENU UZYTKOWNIKA <<<" << endl;
     cout << "---------------------------" << endl;
     cout << "1. Dodaj adresata" << endl;
+    cout << "2. Wyszukaj po imieniu" << endl;
+    cout << "3. Wyszukaj po nazwisku" << endl;
     cout << "4. Wyswietl adresatow" << endl;
     cout << "---------------------------" << endl;
     cout << "7. Zmien haslo" << endl;
@@ -85,4 +87,13 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika() {
 
     return wybor;
 }
+
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu() {
+    adresatMenadzer -> wyszukajAdresatowPoImieniu();
+}
+
+void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku() {
+    adresatMenadzer -> wyszukajAdresatowPoNazwisku();
+}
+
 

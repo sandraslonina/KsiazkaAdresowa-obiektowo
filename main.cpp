@@ -11,7 +11,6 @@ int main() {
 
     while (true) {
         if (!ksiazkaAdresowa.czyUzytkownikJestZalogowany()) {
-            cin.sync();
             wybor = ksiazkaAdresowa.wybierzOpcjeZMenuGlownego();
 
             switch (wybor) {
@@ -34,12 +33,19 @@ int main() {
             }
 
         } else {
-            cin.sync();
             wybor = ksiazkaAdresowa.wybierzOpcjeZMenuUzytkownika();
 
             switch (wybor) {
             case '1':
                 ksiazkaAdresowa.dodajAdresata();
+                break;
+
+            case '2':
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
+                break;
+
+            case '3':
+                ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
                 break;
 
             case '4':
