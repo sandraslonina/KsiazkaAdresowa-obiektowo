@@ -276,4 +276,3 @@ char AdresatMenadzer::wybierzOpcjeZMenuEdycja() {
 
     return wybor;
 }
-

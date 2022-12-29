@@ -105,6 +105,3 @@ void KsiazkaAdresowa::usunAdresata() {
 void KsiazkaAdresowa::edytujAdresata() {
     adresatMenadzer -> edytujAdresata();
 }
-
-
-

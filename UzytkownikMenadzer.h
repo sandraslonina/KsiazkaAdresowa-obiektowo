@@ -40,7 +40,4 @@ public:
     bool czyUzytkownikJestZalogowany();
 
 };
-
-
-
 #endif
