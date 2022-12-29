@@ -162,3 +162,55 @@ string PlikZAdresatami::zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKre
 
     return liniaZDanymiAdresata;
 }
+
+void PlikZAdresatami::usunWybranegoAdresataZPliku(int idAdresata) {
+    int numerWczytanejLinii = 1;
+    int numerUsuwanejLinii = 0;
+    string wczytanaLinia = "";
+
+    fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;
+
+    odczytywanyPlikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::in);
+    tymczasowyPlikTekstowy.open(NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI.c_str(), ios::out | ios::app);
+
+    if (odczytywanyPlikTekstowy.good() == true) {
+        while(getline(odczytywanyPlikTekstowy, wczytanaLinia)) {
+            if (numerWczytanejLinii == 1 && idAdresata == pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia))
+                numerUsuwanejLinii = 1;
+
+            else if (numerWczytanejLinii == 1 && idAdresata != pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia))
+                tymczasowyPlikTekstowy << wczytanaLinia;
+
+            else if (numerWczytanejLinii == 2 && numerUsuwanejLinii == 1 && idAdresata != pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia))
+                tymczasowyPlikTekstowy << wczytanaLinia;
+
+            else if (numerWczytanejLinii > 2 && numerUsuwanejLinii == 1 && idAdresata != pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia))
+                tymczasowyPlikTekstowy << endl << wczytanaLinia;
+
+            else if (numerWczytanejLinii > 1 && idAdresata != pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia))
+                tymczasowyPlikTekstowy << endl << wczytanaLinia;
+
+            else {}
+
+            numerWczytanejLinii++;
+        }
+    }
+
+    odczytywanyPlikTekstowy.close();
+    tymczasowyPlikTekstowy.close();
+
+    usunPlik(NAZWA_PLIKU_Z_ADRESATAMI);
+    zmienNazwePliku(NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI, NAZWA_PLIKU_Z_ADRESATAMI);
+}
+
+void PlikZAdresatami::usunPlik(string nazwaPlikuZRozszerzeniem) {
+    if (remove(nazwaPlikuZRozszerzeniem.c_str()) == 0) {}
+    else
+        cout << "Nie udalo sie usunac pliku " << nazwaPlikuZRozszerzeniem << endl;
+}
+
+void PlikZAdresatami::zmienNazwePliku(string staraNazwa, string nowaNazwa) {
+    if (rename(staraNazwa.c_str(), nowaNazwa.c_str()) == 0) {}
+    else
+        cout << "Nazwa pliku nie zostala zmieniona." << staraNazwa << endl;
+}
