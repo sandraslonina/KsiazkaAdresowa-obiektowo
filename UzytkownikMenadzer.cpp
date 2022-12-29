@@ -122,7 +122,6 @@ void UzytkownikMenadzer::zapiszWszystkichUzytkownikowDoPliku() {
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
 
-
 void UzytkownikMenadzer::wylogowanieUzytkownika() {
     if (idZalogowanegoUzytkownika == 0)
         cout << "Nikt nie jest zalogowany" << endl;
@@ -150,8 +149,3 @@ bool UzytkownikMenadzer::czyUzytkownikJestZalogowany() {
     else
         return false;
 }
-
-
-
-
-

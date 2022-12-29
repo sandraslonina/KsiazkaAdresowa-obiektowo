@@ -18,5 +18,4 @@ public:
     static int wczytajLiczbeCalkowita();
     
 };
-
 #endif

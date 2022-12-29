@@ -41,5 +41,4 @@ public:
     string pobierzEmail();
     string pobierzAdres();
 };
-
 #endif

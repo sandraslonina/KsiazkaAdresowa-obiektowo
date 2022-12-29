@@ -25,5 +25,4 @@ public:
     string pobierzLogin();
     string pobierzHaslo();
 };
-
 #endif
