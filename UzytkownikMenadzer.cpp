@@ -137,7 +137,7 @@ void UzytkownikMenadzer::wylogowanieUzytkownika() {
             itr++;
         }
 
-        cout << "Uzytkownik: "<<itr->pobierzLogin() << " zostal wylogowany."<<endl;
+        cout << "Uzytkownik: " << itr -> pobierzLogin() << " zostal wylogowany."<<endl;
         idZalogowanegoUzytkownika = 0;
         Sleep(1000);
     }

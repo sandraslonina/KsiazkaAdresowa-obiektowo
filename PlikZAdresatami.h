@@ -27,6 +27,9 @@ class PlikZAdresatami {
     void usunPlik(string nazwaPlikuZRozszerzeniem);
     void zmienNazwePliku(string staraNazwa, string nowaNazwa);
 
+    void edytujAdresataWPliku(int idAdresata, string liniaZDanymiAdresataOddzielonePionowymiKreskami);
+
+
 
 public:
     PlikZAdresatami (string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami) {
@@ -39,6 +42,7 @@ public:
     int pobierzIdOstatniegoAdresata();
 
     void usunWybranegoAdresataZPliku(int idAdresata);
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
 
 };
 
