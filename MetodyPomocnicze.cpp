@@ -47,6 +47,7 @@ char MetodyPomocnicze::wczytajZnak() {
     char znak  = {0};
 
     while (true) {
+        cin.sync();
         getline(cin, wejscie);
 
         if (wejscie.length() == 1) {
@@ -56,6 +57,25 @@ char MetodyPomocnicze::wczytajZnak() {
 
         cout << "To nie jest pojedynczy znak. Wpisz ponownie." << endl;
     }
-    
+
     return znak;
+}
+
+int MetodyPomocnicze::wczytajLiczbeCalkowita() {
+    string wejscie = "";
+    int liczba = 0;
+
+    while (true) {
+        cin.sync();
+        getline(cin, wejscie);
+
+        stringstream myStream(wejscie);
+
+        if (myStream >> liczba)
+            break;
+
+        cout << "To nie jest liczba. Wpisz ponownie. " << endl;
+    }
+
+    return liczba;
 }
